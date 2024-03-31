@@ -3,8 +3,8 @@ cardano pool stats tool for single pool operator
 
 this tool is provided free of charges, with no licence and no guarantee by BreizhStakePool.io
 
-this tool is intended to single pool operators with aim to provide a useful tool to collect and use data from a cardano pool
-data is loaded into a MySQL database and can therefore be used to build a website (using PHP for example)
++ this tool is intended to single pool operators with aim to provide a useful tool to collect and use data from a cardano pool
++ data is loaded into a MySQL database and can therefore be used to build a website (using PHP for example)
 
 # help us
 we will appreciate every donation and/or delegation to our pool [BZH]
