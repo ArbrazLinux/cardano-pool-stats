@@ -1,6 +1,6 @@
 # how to use
 
-once initializiation process is done, simply run file './new_epoch.sh' at the beginning of each epoch
+when initializiation process is done, simply run file './new_epoch.sh' at the beginning of each epoch (once in an epoch)
 
 within a epoch, you can update data running './update.sh'
 
