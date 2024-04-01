@@ -9,6 +9,9 @@ we are devoted to Cardano decentralization
 + this tool is intended to single pool operators with aim to provide a useful tool to collect and use data from a cardano pool
 + data is loaded into a MySQL database and can therefore be used to build a website (using PHP for example)
 
+the main code is BASH, but we are working to convert all in PYTHON -- please support our work
+
+
 # help us
 [BZH] is a little fish in the Cardano ocean, but still alive after 3 year of operation ^^
 
