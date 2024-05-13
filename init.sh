@@ -34,3 +34,5 @@ fi
 cp draft_pool_data.json data/pool_data.json
 
 python3 -c"import main; main.init($currentEpoch)"
+python3 -c"import initDB; initDB.initDB($currentEpoch)"
+python3 -c"import updateDB; updateDB"
