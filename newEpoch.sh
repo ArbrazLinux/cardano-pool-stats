@@ -16,5 +16,4 @@ epoch=$(cardano-cli query tip --mainnet | jq -r '.epoch')
 
 python3 -c"import main; main.newEpoch($epoch)"
 
-scp -P 1707 data/pool_data.json bzh@relay1.breizhstakepool.io:../../var/www/breizhstakepool.io/test/test/data/pool_data.json
-
+python3 -c"import updateDB; updateDB"
