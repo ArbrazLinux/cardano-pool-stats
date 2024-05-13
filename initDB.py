@@ -78,11 +78,6 @@ def getFileData(Nepoch):
 #	print(data_H)
 	return data_H
 
-#getFileData(254)
-#getFileData(478)
-#getFileData(474)
-#getFileData(475)
-#getFileData(479)
 ############### SET DATA HISTORY ####################
 def setDataHistory(data_H):
 
@@ -402,12 +397,13 @@ def getGoneDelegators():
 		g += 1;
 
 
-i = 245
-while (i < 479):
-	data_H = getFileData(i)
-	setDataHistory(data_H);
-#	getGoneDelegators();
-	i += 1
+def initDB(currentEpoch):
+	i = REGISTRATION_EPOCH + 2
+	while (i < currentEpoch):
+		data_H = getFileData(i)
+		setDataHistory(data_H);
+		getGoneDelegators();
+		i += 1
 
 mycursor.close()
 mydb.close()
