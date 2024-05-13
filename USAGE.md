@@ -1,10 +1,13 @@
 # how to use
 
-when initializiation process is done, simply run file './new_epoch.sh' at the beginning of each epoch (once in an epoch)
+when initializiation process is done, simply run file './newEpoch.sh' at the beginning of each epoch (once in an epoch)
 
-within a epoch, you can update data running './update.sh'
+within a epoch, you can distribute awards and then update data running './processBonus.sh'
 
-you can setup cron tasks to automate
+you can setup cron tasks to automate :
++ newEpoch.sh ==> at the beginning of a new epoch
++ processBonus.sh ==> whenever within an epoch when you distribute awards (once a time)
++ processRewards.sh ==> less than 36 hours before the end of epoch
 
 
 # AWARDS
@@ -15,7 +18,7 @@ it will be integrated into database
 example 1 :
 in epoch 475 you distribute 30 &#8371; to a delegator, edit 'data/awards.json' as following:
 
-[{"epoch": 475, "awards": [{"address": "stake_address_to_award", "amount": 30000000}]}]
+[{"epoch": 475, "awards": [{"address": "stake_address_to_award", "amount": 30000000}], "assets": []}]
 
 notabene : amount is in LOVELACE | address to award is the STAKE ADRRESS
 
