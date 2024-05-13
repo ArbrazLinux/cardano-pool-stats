@@ -1,0 +1,309 @@
+{
+"current_epoch": 0,
+"pool_ticker": "",
+"pool_id": "",
+"active_since_epoch": 0,
+"owners": {
+		"ownersNb": 0,
+		"previous_ownersNb": 0,
+		"lifetime_max_ownersNb": 0,
+		"lifetime_min_ownersNb": 0,
+		"back_owners": 0,
+		"back_owners_sum":0,
+		"pledge": {
+			"_epoch_": 0,
+			"_previous_": 0,
+			"_lifetime_max_": 0,
+			"_lifetime_min_": 0,
+			"_sum_": 0,
+			"_diff_": 0,
+			"_inputs_sum_": 0,
+			"_outputs_sum_": 0,
+			"_biggest_ever_": 0
+			},
+		"rewards": {
+			"_epoch_": 0,
+			"_sum_": 0
+			},
+		"ROA": {
+			"_lifetime_": 0,
+			"_max_": 0
+			},
+		"owner": [{
+			"stake_address": "",
+			"since_epoch": 0,
+			"epoch_count": 0,
+			"loyalty": 0,
+			"pledge": {
+				"_epoch_": 0,
+				"_previous_": 0,
+				"_lifetime_max_": 0,
+				"_lifetime_min_": 0,
+				"_sum_": 0,
+				"_diff_": 0,
+				"_inputs_sum_": 0,
+				"_outputs_sum_": 0
+				},
+			"rewards": {
+				"_epoch_": 0,
+				"_sum_": 0
+				},
+			"ROA": {
+				"_lifetime_": 0,
+				"_max_": 0
+				}
+			}]
+		},
+"pool": {
+	"stake": {
+		"_epoch_": 0,
+		"_previous_": 0,
+		"_lifetime_max_": 0,
+		"_lifetime_min_": 0,
+		"_sum_": 0,
+		"_diff_": 0,
+		"_inputs_sum_": 0,
+		"_outputs_sum_": 0
+		},
+	"rewards": {
+		"_epoch_": 0,
+		"_sum_": 0
+		},
+	"lost": {
+		"lost_delegs_nb": 0,
+		"lost_delegs_sum": 0,
+		"lost_stake": 0,
+		"lost_stake_sum": 0
+		},
+	"ROA": {
+		"_lifetime_": 0,
+		"_max_": 0
+		}
+	},
+
+"blocks": {
+		"epoch": 0,
+		"lifetime_max": 0,
+		"total_blocks": 0,
+		"block": [],
+		"history":[]
+		},
+"bonuses": {
+		"amount": 0,
+		"awarded_delegators": [{
+			"stake_address": "",
+			"bonus_amount": 0,
+			"assets": []
+			}],
+		"assets": [],
+		"_sum_": 0,
+		"history":[]
+		},
+"delegators": {
+		"delegsNb": 0,
+		"back_delegs": 0,
+		"back_delegs_sum": 0,
+		"previous_delegsNb": 0,
+		"lifetime_max_delegsNb": 0,
+		"lifetime_min_delegsNb": 0,
+		"stake": {
+			"_epoch_": 0,
+			"_previous_": 0,
+			"_lifetime_max_": 0,
+			"_lifetime_min_": 0,
+			"_sum_": 0,
+			"_diff_": 0,
+			"_inputs_sum_": 0,
+			"_outputs_sum_": 0,
+			"_biggest_ever_": 0
+			},
+		"rewards": {
+			"_epoch_": 0,
+			"_sum_": 0
+			},
+		"ROA": {
+			"_lifetime_": 0,
+			"_max_": 0
+			},
+		"delegator": [{
+			"stake_address": "",
+			"since_epoch": 0,
+			"loyalty": 0,
+			"stake": {
+				"_epoch_": 0,
+				"_previous_": 0,
+				"_lifetime_max_": 0,
+				"_lifetime_min_": 0,
+				"_sum_": 0,
+				"_diff_": 0,
+				"_inputs_sum_": 0,
+				"_outputs_sum_": 0
+				},
+			"rewards": {
+				"_epoch_": 0,
+				"_sum_": 0
+				},
+			"bonuses": {
+				"amount": 0,
+				"assets": [],
+				"_previous_": [{
+					"epoch_Nb": 0,
+					"bonus_amount": 0
+					}],
+				"_sum_": 0
+				},
+			"ROA": {
+				"_lifetime_": 0,
+				"_max_": 0
+				}
+			}]
+		},
+"history" : [
+{"epoch": 0,"owners": {
+		"owners_Nb": 0,
+		"pledge": {
+			"_epoch_": 0,
+			"_previous_": 0,
+			"_lifetime_max_": 0,
+			"_lifetime_min_": 0,
+			"_sum_": 0,
+			"_diff_": 0,
+			"_inputs_sum_": 0,
+			"_outputs_sum_": 0,
+			"_biggest_ever_": 0
+			},
+		"rewards": {
+			"_epoch_": 0,
+			"_sum_": 0
+			},
+		"ROA": {
+			"_lifetime_": 0,
+			"_max_": 0
+			},
+		"owner": [{
+			"stake_address": "",
+			"since_epoch": 0,
+			"epoch_count": 0,
+			"loyalty": 0,
+			"pledge": {
+				"_epoch_": 0,
+				"_previous_": 0,
+				"_lifetime_max_": 0,
+				"_lifetime_min_": 0,
+				"_sum_": 0,
+				"_diff_": 0,
+				"_inputs_sum_": 0,
+				"_outputs_sum_": 0
+				},
+			"rewards": {
+				"_epoch_": 0,
+				"_sum_": 0
+				},
+			"ROA": {
+				"_lifetime_": 0,
+				"_max_": 0
+				}
+			}]
+		},
+"pool": {
+	"stake": {
+		"_epoch_": 0,
+		"_previous_": 0,
+		"_lifetime_max_": 0,
+		"_lifetime_min_": 0,
+		"_sum_": 0,
+		"_diff_": 0,
+		"_inputs_sum_": 0,
+		"_outputs_sum_": 0
+		},
+	"rewards": {
+		"_epoch_": 0,
+		"_sum_": 0
+		},
+	"lost": {
+		"lost_delegs_nb": 0,
+		"lost_delegs_sum": 0,
+		"lost_stake": 0,
+		"lost_stake_sum": 0
+		},
+	"ROA": {
+		"_lifetime_": 0,
+		"_max_": 0
+		}
+	},
+
+"blocks": {
+		"epoch_blocks": 0,
+		"lifetime_max_blocks": 0,
+		"total_blocks": 0,
+		"block": [],
+		"history":[]
+		},
+"bonuses": {
+		"amount": 0,
+		"awarded_delegators": [{
+			"stake_address": "",
+			"bonus_amount": 0
+			}],
+		"_sum_": 0,
+		"history":[]
+		},
+"delegators": {
+		"delegsNb": 0,
+		"back_delegs": 0,
+		"back_delegs_sum": 0,
+		"previous_delegsNb": 0,
+		"lifetime_max_delegsNb": 0,
+		"lifetime_min_delegsNb": 0,
+		"stake": {
+			"_epoch_": 0,
+			"_previous_": 0,
+			"_lifetime_max_": 0,
+			"_lifetime_min_": 0,
+			"_sum_": 0,
+			"_diff_": 0,
+			"_inputs_sum_": 0,
+			"_outputs_sum_": 0,
+			"_biggest_ever_": 0
+			},
+		"rewards": {
+			"_epoch_": 0,
+			"_sum_": 0
+			},
+		"ROA": {
+			"_lifetime_": 0,
+			"_max_": 0
+			},
+		"delegator": [{
+			"stake_address": "",
+			"since_epoch": 0,
+			"loyalty": 0,
+			"stake": {
+				"_epoch_": 0,
+				"_previous_": 0,
+				"_lifetime_max_": 0,
+				"_lifetime_min_": 0,
+				"_sum_": 0,
+				"_diff_": 0,
+				"_inputs_sum_": 0,
+				"_outputs_sum_": 0
+				},
+			"rewards": {
+				"_epoch_": 0,
+				"_sum_": 0
+				},
+			"bonuses": {
+				"amount": 0,
+				"_previous_": [{
+					"epoch_Nb": 0,
+					"bonus_amount": 0
+					}],
+				"_sum_": 0
+				},
+			"ROA": {
+				"_lifetime_": 0,
+				"_max_": 0
+				}
+			}]
+		}}]
+}
