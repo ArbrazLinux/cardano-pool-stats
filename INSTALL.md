@@ -24,4 +24,5 @@
   4. load data into MySQL database
  
 + initialization process can take few minutes to hours to complete, depending of your processor and amount of data to retrieve
-+ BlockFrost queries are limited to 50000/day in free version .. there is ((Ndelegators + 1)*(N+1)blocks)*Nepoch queries .. in case you have a great number of delegators (>50), we advise to either upgrade to a paid plan, either proceed initialization in multiple steps
++ BlockFrost queries are limited to 50000/day in free version ..
++ .. in case you have a great number of delegators (>50), we advise to either upgrade to a paid plan, either proceed initialization in multiple steps
