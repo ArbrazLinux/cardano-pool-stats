@@ -1,21 +1,34 @@
-from config import colors
+# this tool is provided free of charges by BREIZHSTAKEPOOL.IO [BZH], proud member of Cardano Single Pool Alliance (CSPA)
+# to help us improve our work, PLEASE CONSIDER A DONATION and/or DELEGATION to our pool [BZH]
+#
+# [BZH] pool ID : 9b9ad921921db31ca91cd6dfdf11f5efee8c1ab94671a6b4a8edc748
+#
+# Cardano donation address : addr1qxm3yvr95pvdm3zzjs6mtqagqzz9yvjt0tr9sqgkte7nzk857qxww9fmak8jkfyr04jzvfra5cxnsrdurmueqy7spdwsmezjvm
+#
+# Bitcoin donation address : bc1qm3gjk0e9c9weqg4dtc5lpk9vs3nd0380d5cw4e
+#
+# report bugs and issues at : https://github.com/ArbrazLinux
+# join our telegram chat room : t.me/bzhpool
+# website : https://breizhstakepool.io
+
+from colors import colors
 import datetime
 import json
 
 import mysql.connector
 
 mydb = mysql.connector.connect(
-  host="HOST",
-  port="PORT",
-  user="USER",
-  password="PASSWORD",
+  host="YOUR-HOST",
+  port="YOUR-PORT",
+  user="YOUR-USERNAME",
+  password="YOUR-PASSWORD",
   database="pool_DB"
 )
 
 mycursor = mydb.cursor()
 
 
-with open('./pool_data.json') as json_file:
+with open('data/pool_data.json') as json_file:
     z = json.load(json_file)
 
 
@@ -67,7 +80,7 @@ def updatePoolData(y):
 	os_StakeStrg = os["pledge"];
 	os_RewardsStrg = os["rewards"];
 	os_ROAStrg = os["ROA"];
-	os_number = os["owners_Nb"];
+	os_number = os["ownersNb"];
 	os_Stake_current = os_StakeStrg["_epoch_"];
 	os_Stake_previous = os_StakeStrg["_previous_"];
 	os_Stake_sum = os_StakeStrg["_sum_"];
@@ -106,7 +119,7 @@ def updatePoolData(y):
 	bns_Bonus_current = bns["amount"];
 	bns_Bonus_sum = bns["_sum_"];
 	##### blocks #########
-	blk_blocks_current = blk["epoch_blocks"];
+	blk_blocks_current = blk["epoch"];
 	blk_blocks_sum = blk["total_blocks"];
 
 	sqlEpoch = "INSERT INTO epoch (epoch_number, pool_stake, pool_stake_previous, pool_stake_sum, pool_stake_diff, pool_stake_max, pool_stake_min, pool_stake_inputs_sum, pool_stake_outputs_sum, biggest_single_owner_pledge, biggest_single_delegator_stake, pool_rewards, pool_rewards_sum, pool_ROA_current, pool_ROA_max, owners_nb, pledge, pledge_previous, pledge_sum, pledge_diff, pledge_max, pledge_min, pledge_inputs_sum, pledge_outputs_sum, owners_rewards, owners_rewards_sum, owners_ROA_current, owners_ROA_max, delegators_nb, delegators_back_count, delegators_back_sum, delegators_lost_count, delegators_lost_sum, delegators_stake, delegators_stake_previous, delegators_stake_sum, delegators_stake_diff, delegators_stake_max, delegators_stake_min, delegators_stake_inputs_sum, delegators_stake_outputs_sum, delegators_lost_stake, delegators_lost_stake_sum, delegators_rewards, delegators_rewards_sum, delegators_ROA_current, delegators_ROA_max, delegators_ROA_bonusincluded, blocks, blocks_sum, bonuses, bonuses_sum) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s) ON DUPLICATE KEY UPDATE pool_stake = %s, pool_stake_previous = %s, pool_stake_sum = %s, pool_stake_diff = %s, pool_stake_max = %s, pool_stake_min = %s, pool_stake_inputs_sum = %s, pool_stake_outputs_sum = %s, biggest_single_owner_pledge = %s, biggest_single_delegator_stake = %s, pool_rewards = %s, pool_rewards_sum = %s, pool_ROA_current = %s, pool_ROA_max = %s, owners_nb = %s, pledge = %s, pledge_previous = %s, pledge_sum = %s, pledge_diff = %s, pledge_max = %s, pledge_min = %s, pledge_inputs_sum = %s, pledge_outputs_sum = %s, owners_rewards = %s, owners_rewards_sum = %s, owners_ROA_current = %s, owners_ROA_max = %s, delegators_nb = %s, delegators_back_count = %s, delegators_back_sum = %s, delegators_lost_count = %s, delegators_lost_sum = %s, delegators_stake = %s, delegators_stake_previous = %s, delegators_stake_sum = %s, delegators_stake_diff = %s, delegators_stake_max = %s, delegators_stake_min = %s, delegators_stake_inputs_sum = %s, delegators_stake_outputs_sum = %s, delegators_lost_stake = %s, delegators_lost_stake_sum = %s, delegators_rewards = %s, delegators_rewards_sum = %s, delegators_ROA_current = %s, delegators_ROA_max = %s, delegators_ROA_bonusincluded = %s, blocks = %s, blocks_sum = %s, bonuses = %s, bonuses_sum = %s";
@@ -135,7 +148,7 @@ def updateOwnersData(y):
 		o_epoch_count = o_Strg[k]["epoch_count"];
 		o_Score = o_Strg[k]["loyalty"];
 
-		o_StakeStrg = o_Strg[k]["pledge"];
+		o_StakeStrg = o_Strg[k]["stake"];
 		o_Stake_current = o_StakeStrg["_epoch_"]; 
 		o_Stake_previous = o_StakeStrg["_previous_"];
 
@@ -199,6 +212,10 @@ def updateDelegatorsData(y):
 		d_epoch_count = d_Strg[j]["epoch_count"];
 		d_loyalty = d_Strg[j]["loyalty"];
 		d_comeback = d_Strg[j]["comeback"];
+		if (d_comeback == "False"):
+			d_comeback = 0
+		else:
+			d_comeback = 1
 		d_comeback_count = d_Strg[j]["comeback_count"];
 		d_StakeStrg = d_Strg[j]["stake"];
 		d_Stake_current = d_StakeStrg["_epoch_"];
@@ -274,7 +291,7 @@ def updateDelegatorsData(y):
 def updateBlocksData(y):
 
 	bStrg = z["blocks"];
-	blkNB = bStrg["epoch_blocks"];
+	blkNB = bStrg["epoch"];
 	print("nb blocks : ", blkNB);
 	if blkNB != 0 :
 		h = len(bStrg["block"]);
@@ -303,7 +320,7 @@ def updateBlocksData(y):
 
 ############### GET GONE DELEGATORS #####################
 def updateGoneDelegators():
-	with open('./gone_delegators.json') as json_file:
+	with open('data/gone_delegators.json') as json_file:
 		gd = json.load(json_file)
 
 	gd_length = len(gd["gone_delegators"]);
