@@ -14,7 +14,6 @@
 import pycurl
 import json
 from initEpoch import initEpoch
-from setPoolData import setOwnersIndex, setDelegsIndex
 from functions import getRewards, checkBonus, setROA, checkGoneAndLost, checkBlocks, checkBiggest
 from functions_2 import getHistFile
 from config import POOL_ID, POOL_TICKER, REGISTRATION_EPOCH, OWNERS_STAKE_ADDRESS
@@ -90,7 +89,7 @@ def checkRewardsStatus(currentEpoch):
 				O_rewards = getRewards(str(O_add), Hepoch)
 				if (int(O_rewards) > 0):
 					print("rewards dispos")
-			#		initEpoch(Hepoch)
+					initEpoch(Hepoch)
 					updating[u] = True
 				else:
 					print("rewards pas encore dispos")
@@ -393,5 +392,3 @@ def updateRewardsHistory(epoch, file, index, previousUpdated):
 		w_file.close()
 #	print(H_data_STRG)
 
-
-#processRewards(327)
