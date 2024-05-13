@@ -181,7 +181,7 @@ def processBonus(Epoch, bonus_list):
 #	print(bonusSTRG)
 	pooldata_STRG = str(pooldata_STRG).replace(B_replacedSTRG, bonusSTRG.replace(xx,cc))
 
-	with open("tmp/tmpB.json", "w") as file:
+	with open("data/pool_data.json", "w") as file:
 		file.write(pooldata_STRG.replace(cc,xx))
 		file.close()
 
